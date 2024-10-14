@@ -1,0 +1,16 @@
+name: second workflow
+on: push
+jobs:
+  firstJob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: download the code from repo onto runner
+        uses: actions/checkout@v4
+      - name: install nodejs
+        uses: actions/setup-node@4
+        with: 
+          node-version: 20
+      - name: install dependencies
+        run: npm ci
+      - name: run tests
+        run: npm test
