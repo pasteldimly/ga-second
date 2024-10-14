@@ -7,7 +7,7 @@ jobs:
       - name: download the code from repo onto runner
         uses: actions/checkout@v4
       - name: install nodejs
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@4
         with: 
           node-version: 20
       - name: install dependencies
