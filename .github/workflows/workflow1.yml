@@ -1,7 +1,7 @@
 name: second workflow
 on: push
 jobs:
-  firstJob:
+  first-job:
     runs-on: ubuntu-latest
     steps:
       - name: download the code from repo onto runner
